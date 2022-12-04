@@ -1,0 +1,14 @@
+﻿
+@model MVCPubs.Models.Store
+
+@{
+    ViewBag.Title = "Eliminar Store";
+}
+
+<h1>Eliminar Store</h1>
+<br />
+@using (Html.BeginForm("Delete", "Store", FormMethod.Post))
+{
+    <input type="Submit" value="Delete" class="btn btn-danger me-3" />
+    @Html.ActionLink("Volver al listado", "Index", "Store")
+}

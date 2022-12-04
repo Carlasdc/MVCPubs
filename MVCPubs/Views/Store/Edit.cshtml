@@ -1,0 +1,38 @@
+﻿@model MVCPubs.Models.Store
+
+    <div>
+        <h2> Editar</h2>
+        @using (Html.BeginForm("Edit", "Store", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.ValidationSummary(true)
+            <p>
+                @Html.LabelFor(model => model.StorName):
+                @Html.EditorFor(model => model.StorName)
+                @Html.ValidationMessageFor(model => model.StorName)
+            </p>
+            <p>
+                @Html.LabelFor(model => model.StorAddress):
+                @Html.EditorFor(model => model.StorAddress)
+                @Html.ValidationMessageFor(model => model.StorAddress)
+            </p>
+             <p>
+                @Html.LabelFor(model => model.City):
+                @Html.EditorFor(model => model.City)
+                @Html.ValidationMessageFor(model => model.City)
+            </p>
+             <p>
+                @Html.LabelFor(model => model.State):
+                @Html.EditorFor(model => model.State)
+                @Html.ValidationMessageFor(model => model.State)
+            </p>
+             <p>
+                @Html.LabelFor(model => model.Zip):
+                @Html.EditorFor(model => model.Zip)
+                @Html.ValidationMessageFor(model => model.Zip)
+            </p>
+            <p>
+                <input type="submit" value="Edit" />
+            </p>
+            @Html.ActionLink("Volver", "Index")
+        }
+    </div>
